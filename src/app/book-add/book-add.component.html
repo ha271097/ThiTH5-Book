@@ -1,0 +1,27 @@
+
+  <h1 style="text-align: center;">Thêm mới/Sửa sách</h1>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="bookForm" class="form-group" >
+  <table id="add-table" cellpadding="10px">
+    <tr>
+      <td><label for="book-title">Tên sách:</label></td>
+      <td><input type="text" id="book-title" [formControl]="bookTitle" class="form-control"></td>
+    </tr>
+    <tr>
+      <td><label for="book-author">Tác giả:</label></td>
+      <td><input type="text" id="book-author" [formControl]="bookAuthor" class="form-control"></td>
+    </tr>
+    <tr>
+      <td><label for="book-description">Mô tả:</label></td>
+      <td><textarea id="book-description" cols="30" rows="10" [formControl]="bookDescription" class="form-control"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" class="btn btn-outline-info">{{buttonLabel}}</button>
+        <button routerLink="" class="btn btn-outline-danger">Trở lại trang chủ</button>
+      </td>
+    </tr> 
+  </table>
+
+</form>
+<p class="alert alert-success" *ngIf="message">{{message}}</p>

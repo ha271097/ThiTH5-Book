@@ -1,0 +1,17 @@
+
+  <h1 style="text-align: center;">Xóa sách !!!! {{book.title}}</h1>
+<div>
+  <label for="book-title">Tên Sách:  </label>
+  <span id="book-title">"{{book.title}}"</span>
+</div>
+<div>
+  <label for="book-author">Tác Giả: </label>
+  <span id="book-author">{{book.author}}</span>
+</div>
+<div>
+  <label for="book-description">Mô Tả: </label>
+  <p id="book-description">{{book.description}}</p>
+</div>
+<button (click)="onDelete()" class="btn btn-outline-danger">Xóa sách này ngay!</button>
+<button routerLink="" class="btn btn-outline-primary">Trở lại trang chủ!</button>
+<p class="alert alert-success" *ngIf="message">{{message}}</p>
